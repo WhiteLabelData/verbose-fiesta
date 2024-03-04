@@ -37,8 +37,8 @@ steps:
     TargetFolder: '$(Build.ArtifactStagingDirectory)'  # Copy to artifact staging directory
   displayName: 'Copy Python files'
 
- - task: PublishBuildArtifacts@1
+- task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: 'python-files'
-  displayName: 'Publish Python files as artifact' 
+  displayName: 'Publish Python files as artifact'
