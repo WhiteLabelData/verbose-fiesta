@@ -30,4 +30,9 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install dependencies'
 
-
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'path/to/source'
+    Contents: '**/*.py'  # Include all .py files
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'  # Copy to artifact staging directory
+  displayName: 'Copy Python files'
