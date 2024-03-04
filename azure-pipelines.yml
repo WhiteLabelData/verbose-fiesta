@@ -32,7 +32,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'path/to/source'
+    SourceFolder: '.'
     Contents: '**/*.py'  # Include all .py files
     TargetFolder: '$(Build.ArtifactStagingDirectory)'  # Copy to artifact staging directory
   displayName: 'Copy Python files'
